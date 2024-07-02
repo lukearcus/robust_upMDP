@@ -28,8 +28,8 @@ def plot_robot(policy, upMDP):
         j_pos = (jan-n*(jan//n), jan//n)
 
         ax = plt.subplot()
-        print(j_pos)
-        ax.plot([r_pos[0]],[r_pos[1]], marker=r'$\bigotimes$')
+        #print(j_pos)
+        ax.plot([r_pos[0]],[r_pos[1]], ms=24, marker=r'$\bigotimes$')
         ax.plot([j_pos[0]],[j_pos[1]], 'x')
         ax.set_xlim((-0.5,2.5))
         ax.set_ylim((-0.5,2.5))
