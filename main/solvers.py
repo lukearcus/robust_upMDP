@@ -206,6 +206,7 @@ class det(mixed_opt):
             curr_samples = poss_samples.flatten().tolist()
             block_samples.append(curr_samples)
             block_set  = block_set.union(curr_samples)
+        hit_set = block_set
         for i in range(len(block_set)):
             if self.check_timeout(start):
                 return -1, None, None, None
@@ -246,9 +247,9 @@ class MNE(mixed_opt):
             payoffs = -payoffs
         pol, val = self.MNE_algo(payoffs, self.max_time, self.itts)
         if pol is not None:
+            supps = np.argwhere(pol[1] > 0)
             info = {"pols": pols, "all":(pol[0]@payoffs).flatten(), "ids":rel_samples}
-            pol = (pol[0], pols)
-            supps = np.argwhere(pol[0] >= 1e-5)
+            pol = (pol[0].flatten(), pols)
         else:
             supps = samples 
             info = None

@@ -89,7 +89,7 @@ def FSP_algo(payoffs, max_time, max_iters = 100000):
             pol_dist[0, np.argmax(pol_vec)] += new
             sample_dist[np.argmin(sample_vec), 0] += new
     res = np.min(pol_dist@payoffs)
-    return pol_dist, res
+    return (pol_dist, sample_dist), res
     #info = {"pols": pols, "all":(pol_dist@payoffs).flatten(), "ids":rel_samples}
     #return res, pol_dist.flatten(), np.sum(sample_dist >= 1e-4), info
 
