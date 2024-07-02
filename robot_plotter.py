@@ -30,3 +30,4 @@ def plot_robot(policy, upMDP):
         plt.plot([r_pos[0]],[r_pos[1]], 'o')
         plt.plot([j_pos[0]],[j_pos[1]], 'x')
         plt.savefig("robot_plots/{0:0=2d}.png".format(i))
+        plt.cla()
