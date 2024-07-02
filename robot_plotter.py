@@ -27,6 +27,6 @@ def plot_robot(policy, upMDP):
         r_pos = (robot-n*(robot//n), robot//n)
         j_pos = (jan-n*(jan//n), jan//n)
 
-        plt.plot(r_pos, 'o')
-        plt.plot(j_pos, 'x')
+        plt.plot(r_pos[0],r_pos[1], 'o')
+        plt.plot(j_pos[0],j_pos[1], 'x')
         plt.savefig("robot_plots/{}.png".format(i))
