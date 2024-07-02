@@ -35,6 +35,8 @@ def main():
         sol.solve(samples, model)
         sol.output() 
     
+    import pdb; pdb.set_trace()
+
     if args["output_figs"] or args["save_figs"]:
         if not args["sg_only"]:
             solvers[0].plot_hist(solvers[4].opt)
