@@ -44,4 +44,4 @@ def plot_robot(policy, upMDP):
             plt.clf()
             #ax.clear()
             #plt.close()
-        ind = i
+        ind += i
