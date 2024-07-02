@@ -38,6 +38,7 @@ def plot_robot(policy, upMDP):
             smiley.vertices -= smiley.vertices.mean(axis=0)
 
             ax.plot([j_pos[0]],[j_pos[1]], marker=smiley, ms=24, color="red")
+            ax.plot([2],[2], marker=r'$\star$', color="green", ms=24)
             ax.set_xlim((-0.5,2.5))
             ax.set_ylim((-0.5,2.5))
             plt.savefig("robot_plots/{0:0=3d}.png".format(ind+i))
