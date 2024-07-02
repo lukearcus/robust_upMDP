@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 from svgpath2mpl import parse_path
 
 def plot_robot(policy, upMDP):
+    ind = 0
     for j in range(10):
-        ind = 0
         MDP = upMDP.sample_MDP()
         state = upMDP.Init_state
         traj = [state]
@@ -45,3 +45,4 @@ def plot_robot(policy, upMDP):
             #ax.clear()
             #plt.close()
         ind += i
+        print(ind)
