@@ -34,5 +34,6 @@ def plot_robot(policy, upMDP):
         ax.set_xlim((-0.5,2.5))
         ax.set_ylim((-0.5,2.5))
         plt.savefig("robot_plots/{0:0=2d}.png".format(i))
-        ax.clear()
+        plt.clf()
+        #ax.clear()
         #plt.close()
